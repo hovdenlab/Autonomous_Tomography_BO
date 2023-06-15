@@ -3,6 +3,7 @@ from skopt.space.space import Integer, Categorical, Real
 from skopt.plots import plot_gaussian_process, plot_convergence, plot_objective_2D, plot_objective
 from sklearn.gaussian_process.kernels import RBF, Matern
 from skopt.learning import GaussianProcessRegressor as GPR
+import simulation_utils
 import random
 import numpy as np
 from datetime import datetime
