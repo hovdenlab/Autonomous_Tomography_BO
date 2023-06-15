@@ -19,17 +19,17 @@ filename = 'au_sto.h5'
 tiltAngles = np.arange(-70,70,2)
 recon_parameters = {'lambdaParam':0, 'Niter': 100, 'nTViter':15, 'alg':'fista'}
 
+# Class for Performing Reconstructions
+reconstructor_object = simulation_utils_FISTA.FISTA_simulation(filename,tiltAngles)
+
+##### Prepare optimizer #####
+
 # BO Parameters
 nBOiter = 20        # Total iterations (including initial pts)
 lower_bound = 1
 upper_bound = 5000
 n_init_pts = 5
 nu = 2.5            # nu controls the smoothness of the matern kernel fitting for GP (e.g. nu = 1.5 corresponds to once differentiable functions, and nu = 2.5 to twice differentiable functions).
-
-# Class for Performing Reconstructions
-reconstructor_object = simulation_utils_WM.FISTA_simulation(filename,tiltAngles)
-
-##### Prepare optimizer #####
 
 # Define the Kernel
 mat_kern = Matern(length_scale = 1, length_scale_bounds = (1, 10), nu = nu)
