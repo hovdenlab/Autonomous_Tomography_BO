@@ -13,7 +13,7 @@ import os
 ##### Prepare reconstruction script #####
 
 # Test Phantom Object 
-filename = 'au_sto.h5'
+filename = 'your_file'
 
 # Tilt Series for Experiment / Simulation
 tiltAngles = np.arange(-70,70,2)
