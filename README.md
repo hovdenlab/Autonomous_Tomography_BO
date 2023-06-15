@@ -20,4 +20,4 @@ To clone the repositiory run:
 
 Install the astra-toolbox (https://www.astra-toolbox.com/). In the make.inc file in utils specify the location of the astra-toolbox library on your local machine. Compile the regularization, container, and astra scripts using the three Makefiles (in utils, utils/regularizers, and utils/container) prior to running the example jupyter notebook or example python file.
 
-The bayesian_tomography.py and bayesian_tomography_notebook.ipynb are two versions of the same file that reproduce the results of the manuscript.
+The bayesian_tomography.py and bayesian_tomography_notebook.ipynb are two versions of the same file that reproduce the results of the manuscript, be sure to specify your input filename, and modify the input file type as necessary in the simulation_utils_FISTA initialization. To port additional reconstruction algorithms or functions of interest, ignore simulation_utils_FISTA and edit line 23 in bayesian_tomography.py (where the reconstruction_object is created) to implement BO for additional applications.
